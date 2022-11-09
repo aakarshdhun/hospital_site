@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Appointment{% endblock %}
+{% block content %}
+<h4 class="text-center border border-4 border-dark" style="background-color:grey;color:white;">Make an Appointment</h4>
+<div class="container text-center my-5 w-50 border border-3 border-dark" style="background-color:#5DA493;">
+<form class="p-3"  action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+</div>
+{% endblock %}

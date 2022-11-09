@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Doctors{% endblock %}
+{% block content %}
+    <h3 id="1" class="text-center border border-4 border-dark" style="background-color:grey;color:white;">Our Doctors</h3>
+
+<div class="container ">
+    <div class="row">
+         {% for d in doc %}
+        <div class="col-4">
+
+    <div class="card text-center mx-3 my-3 border border-4 border-dark">
+        <img src="{{d.doc_image.url}}" class="card-img-top" alt="doctor image">
+        <div class="card-body">
+            <h5 class="card-title">{{d.doc_name}}</h5>
+            <p class="card-text"> {{d.doc_spec}}</p>
+            <h5 class="card-title">{{d.dep_name}} Department</h5>
+        </div>
+    </div>
+
+        </div>
+        {% endfor %}
+</div>
+</div>
+{% endblock %}

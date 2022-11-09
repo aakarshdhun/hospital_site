@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</head>
+<!--<body class="bg-image" style="background-image: url('https://wallpaperaccess.com/full/1282799.jpg');height: 100vh;">-->
+<body>
+    <nav class="navbar fixed-top navbar-dark border border-dark border-2" style="background-color:#5DA493">
+  <div class="container-fluid">
+    <h6 class="navbar-brand" style="color:white;">XXX Multispeciality Hospital</h6>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+             <a class="nav-link" style="color:white;"" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" style="color:white;" href="{% url 'about' %}">About</a>
+        </li>
+          <li class="nav-item">
+             <a class="nav-link" style="color:white;" href="{% url 'departments' %}">Departments</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" style="color:white;" href="{% url 'doctors' %}">Doctors</a>
+        </li>
+          <li class="nav-item">
+             <a class="nav-link" style="color:white;" href="{% url 'appointment' %}">Appointment</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" style="color:white;" href="{% url 'contact' %}">Contact</a>
+        </li>
+
+      </ul>
+  </div>
+</nav>
+
+<main>{% block content %}{% endblock %}</main>
+
+
+<footer>
+    <nav class="navbar fixed-bottom navbar-dark border border-dark border-3 py-0 " style="background-color:#5DA493;">
+  <div class="container-fluid">
+    <h6 class="navbar-brand" style="color:white;" href="#">Emergency Contact Number:- 0123-4567890 ; 3456789</h6>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+             <a class="nav-link" style="color:white;" href="#">@2022 XXX Multispeciality Hospital all rights received</a>
+        </li>
+      </ul>
+
+  </div>
+</nav>
+</footer>
+</body>
+</html>
